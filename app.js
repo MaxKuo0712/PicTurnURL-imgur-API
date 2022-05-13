@@ -84,7 +84,6 @@ function submit() {
     $.ajax(settings).done(function (res) {
         console.log(JSON.parse(res).data.link); // 可以看見上傳成功後回傳的URL
         alert('上傳完成');
-        uploadInput.outerHTML = uploadInput.outerHTML; // 初始化
     });
 }
 
