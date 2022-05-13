@@ -6,7 +6,6 @@ const uploadInput = document.getElementById("upload");
 let PicTurnUrl = new PicTurnURL();
 
 uploadInput.addEventListener("change", () => {
-    console.log(uploadInput);
     PicTurnUrl.setuploadFile(uploadInput.files[0]);
     PicTurnUrl.setfileName(PicTurnUrl.uploadFile.name);
     PicTurnUrl.setfileSize(Math.floor(PicTurnUrl.uploadFile.size * 0.001) + 'KB');
