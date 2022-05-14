@@ -1,4 +1,4 @@
-const token = '22e7ba553d6239bc5de2bf1520c9187b611a760d'; // 填入 token
+const token = 'Your imgur Token'; // 填入 token
 
 const actionBtn = document.getElementById("myBtn"); // 送出按鈕
 const uploadInput = document.getElementById("upload"); // upload上傳物件的地方
