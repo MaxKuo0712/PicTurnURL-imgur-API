@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#myDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2rem;
+    width: 50vw;
+    height: 50vh;
+
+    #upload {
+        padding: 2rem;
+    }
+
+    #showImg {
+        margin-bottom: 1rem;
+        width: 512px;
+        height: 512px;
+    }
+}

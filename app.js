@@ -1,7 +1,9 @@
-const token = 'Your imgur Token'; // 填入 token
+const token = '22e7ba553d6239bc5de2bf1520c9187b611a760d'; // 填入 token
 
 const actionBtn = document.getElementById("myBtn"); // 送出按鈕
 const uploadInput = document.getElementById("upload"); // upload上傳物件的地方
+const showImg = document.getElementById("showImg");
+const url = document.getElementById("url");
 
 // 建立file class物件
 class file {
@@ -56,6 +58,11 @@ class file {
     }
 }
 
+function addImg(imgURL) {
+    showImg.src = imgURL;
+    url.innerText = '圖檔網址：' + imgURL;
+}
+
 // 上傳的function
 function submit() {
     // api
@@ -82,7 +89,9 @@ function submit() {
 
     // 傳遞資料
     $.ajax(settings).done(function (res) {
-        console.log(JSON.parse(res).data.link); // 可以看見上傳成功後回傳的URL
+        const imgURL = JSON.parse(res).data.link
+        addImg(imgURL);
+        console.log(JSON.parse(res)); // 可以看見上傳成功後回傳的URL
         alert('上傳完成');
     });
 }
